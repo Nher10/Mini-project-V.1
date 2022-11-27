@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="title icon" type="image/png" href="images/box-icon.jpg">
+    <script src="https://kit.fontawesome.com/88088e9bd0.js" crossorigin="anonymous"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Lance Box</title>
+  </head>
+  <body>
+
+    <!-- next versaion napo ako maglagay ibang page sabay javascript sa version 2 po -->
+
+    <div class="main-page">
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light px-2">
+            <button class="navbar-toggler ms-auto mb-2 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- sidebar -->
+                        <div class="col-xxl-2 col-xl-3 col-lg-3  sidebar fixed-top">
+                            <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">
+                                LanceBOX
+                            </a>
+                            <div class="bottom-border pb-3">
+                                <img src="images/FB_IMG_1669187426783.jpg" alt="pogi" width="50" class="rounded-circle me-3">
+                                <a href="#" class="text-decoration-none text-white">Nherwin Ostia</a>
+                            </div>
+                            <ul class="navbar-nav flex-column mt-2">
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-panel"><i class="fa-solid fa-house-user text-light fa-lg me-3"></i>Panel</a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa-solid fa-user text-light fa-lg me-3"></i>Profile</a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa-solid fa-inbox text-light fa-lg me-3"></i>Inbox</a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa-solid fa-book text-light fa-lg me-3"></i>Books</a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa-solid fa-lightbulb text-light fa-lg me-3"></i>Courses</a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa-solid fa-wrench text-light fa-lg me-3"></i>Settings</a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 sidebar-link"><i class="fa-solid fa-file text-light fa-lg me-3"></i>Docs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end of sidebar -->
+
+                        <!-- top nav -->
+                        <div class="col-xxl-10 col-xl-9 col-lg-9  ms-auto bg-dark fixed-top py-2 top-navbar">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-xl-4 col-lg-4">
+                                    <h4 class="text-light text-uppercase mb-0">Panel</h4>
+                                </div>
+                                <div class="co-xl-4 col-lg-4">
+                                    <form>
+                                        <div class="input-group">
+                    
+                                                <input type="text" class="form-control bg-secondary text-light search-input" placeholder="Search...">
+                                                <button type="button" class="btn btn-light search-button"><i class="fas fa-search text-primary"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xl-4 col-lg-4">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i class="fas fa-comments text-muted fa-lg"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link"><i class="fas fa-bell text-muted fa-lg"></i></a>
+                                        </li>
+                                        <li class="nav-item ms-lg-auto">
+                                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#sign-out"><i class="fas fa-sign-out-alt  fa-lg text-primary"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of top nav -->
+
+                        <!-- modal -->
+                        <div class="modal fade bg-dark" id="sign-out">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Already Done?</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <p>Press signout to leave</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Stay</button>
+                                <button type="button" class="btn btn-danger">Signout</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- end of modal -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar -->
+
+        <!-- cards -->
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 ms-auto">
+                        <div class="row pt-lg-5 mt-lg-3 mb-5">
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 p-2">
+                                <div class="card cards">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <i class="fa-solid fa-cart-shopping fa-3x text-warning"></i>
+                                            <div class="d-flex flex-column align-items-end justify-content-evenly text-secondary">
+                                                <h5>Book Sales</h5>
+                                                <h3>P35,000</h3>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fa-solid fa-rotate me-2"></i>
+                                        <span>Updated Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 p-2">
+                                <div class="card cards">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <i class="fa-solid fa-photo-film fa-3x text-success"></i>
+                                            <div class="d-flex flex-column align-items-end justify-content-evenly text-secondary">
+                                                <h5>Classes</h5>
+                                                <h3>574</h3>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fa-solid fa-rotate me-2"></i>
+                                        <span>Updated Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 p-2">
+                                <div class="card cards">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <i class="fa-solid fa-users fa-3x text-info"></i>
+                                            <div class="d-flex flex-column align-items-end justify-content-evenly text-secondary">
+                                                <h5>Students</h5>
+                                                <h3>8,745</h3>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fa-solid fa-rotate me-2"></i>
+                                        <span>Updated Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 p-2">
+                                <div class="card cards">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <i class="fa-solid fa-chart-line fa-3x text-danger"></i>
+                                            <div class="d-flex flex-column align-items-end justify-content-evenly text-secondary">
+                                                <h5>Visits</h5>
+                                                <h3>20,000</h3>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-secondary">
+                                        <i class="fa-solid fa-rotate me-2"></i>
+                                        <span>Updated Now</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of cards -->
+
+        <!-- tables -->
+        <section>
+            <div class="container-fluid">
+                <div class="row mb-5 align-items-center">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 ms-auto">
+                        <div class="row">
+                            <div class="col-xxl-6 col-xl-6 col-12 mb-4">
+                                <h3 class="text-muted text-center fw-bold mb-2">Top Courses</h3>
+                                <table class="table table-striped text-center">
+                                    <thead>
+                                        <tr class="text-muted">
+                                            <th>#</th>
+                                            <th>Guru</th>
+                                            <th>Course</th>
+                                            <th>Students</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-muted">
+                                            <th>1</th>
+                                            <td>Mark</td>
+                                            <td>Marketing</td>
+                                            <td>1,500</td>
+                                            <td><button type="button" class="btn btn-info btn-sm">Start</button></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>2</th>
+                                            <td>Kevin</td>
+                                            <td>Graphic Design</td>
+                                            <td>1,450</td>
+                                            <td><button type="button" class="btn btn-info btn-sm">Start</button></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>3</th>
+                                            <td>Mary</td>
+                                            <td>Data Entry</td>
+                                            <td>1,000</td>
+                                            <td><button type="button" class="btn btn-info btn-sm">Start</button></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>4</th>
+                                            <td>John</td>
+                                            <td>Bookeeping</td>
+                                            <td>550</td>
+                                            <td><button type="button" class="btn btn-info btn-sm">Start</button></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>5</th>
+                                            <td>Tony</td>
+                                            <td>Video Editing</td>
+                                            <td>400</td>
+                                            <td><button type="button" class="btn btn-info btn-sm">Start</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- pagination -->
+                                <nav>
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                <span>&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                1
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                2
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                3
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                <span>&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- end of pagination -->
+
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-12">
+                                <h3 class="text-muted text-center fw-bold mb-3">Skilled Students</h3>
+                                <table class="table table-dark table-hover text-center">
+                                    <thead>
+                                        <tr class="text-muted">
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Course</th>
+                                            <th>Rated</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="text-muted">
+                                            <th>1</th>
+                                            <td>Bert</td>
+                                            <td>Graphic Design</td>
+                                            <td>98.2%</td>
+                                            <td><span class="badge bg-success w-100 py-2">Hired</span></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>2</th>
+                                            <td>Mona</td>
+                                            <td>Graphic Design</td>
+                                            <td>98.2%</td>
+                                            <td><span class="badge bg-success w-100 py-2">Hired</span></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>3</th>
+                                            <td>King</td>
+                                            <td>Data Analysis</td>
+                                            <td>98.2%</td>
+                                            <td><span class="badge bg-danger w-100 py-2">Bench</span></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>4</th>
+                                            <td>Marco</td>
+                                            <td>Graphic Design</td>
+                                            <td>98.2%</td>
+                                            <td><span class="badge bg-success w-100 py-2">Hired</span></td>
+                                        </tr>
+                                        <tr class="text-muted">
+                                            <th>5</th>
+                                            <td>Eugene</td>
+                                            <td>Photography</td>
+                                            <td>98.2%</td>
+                                            <td><span class="badge bg-danger w-100 py-2">Bench</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- pagination -->
+                                <nav>
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                <span>&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                1
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                2
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                3
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link py-2 px-3">
+                                                <span>&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- end of pagination -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of tables -->
+
+        <!-- your progress/ youve learned -->
+        <section>
+            <div class="container-fluid">
+                <div class="row mb-5">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 ms-auto">
+                        <div class="row mb-4 align-items-center justify-content-center">
+                            <div class="col-xxl-6 col-xl-6 col-12 mb-5">
+                                <div class="bg-dark text-white p-4 rounded">
+                                    <h4 class="mb-5">Your Proress</h4>
+                                    <h6 class="mb-3">Content Writing</h6>
+                                    <div class="progress mb-4" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 95%;">
+                                            95%
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-3">Data Analysis</h6>
+                                    <div class="progress mb-4" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 82%;">
+                                            82%
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-3">Virtual Assistant</h6>
+                                    <div class="progress mb-4" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold
+                                        bg-warning" style="width: 51%;">
+                                            51%
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-3">Graphic Design</h6>
+                                    <div class="progress mb-4" style="height: 20px;">
+                                        <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 32%;">
+                                            32%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-12">
+                                <div class="card rounded">
+                                    <div class="card-body">
+                                        <h5 class="text-muted text-center mb-4 fw-bold">
+                                            Post a Status
+                                        </h5>
+                                        <ul class="list-inline text-center py-3">
+                                            <li class="list-inline-item me-4">
+                                                <a href="#" class="text-decoration-none">
+                                                    <i class="fa-solid fa-pencil text-success"></i>
+                                                    <span class="h6 text-muted">Status</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item me-4">
+                                                <a href="#" class="text-decoration-none">
+                                                    <i class="fa-solid fa-camera text-info"></i>
+                                                    <span class="h6 text-muted">Photo</span>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#" class="text-decoration-none">
+                                                    <i class="fa-solid fa-location-dot text-primary"></i>
+                                                    <span class="h6 text-muted">Check-in</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control py-2 mb-3" placeholder="what you've learned today...">
+                                                <button type="button" class="btn btn-block text-uppercase font-weight-bold text-light bg-info py-2 mb-5 w-100">Submit Post</button>
+                                            </div>
+                                        </form>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="card bg-light">
+                                                    <i class="fa-regular fa-calendar-days fa-8x text-warning d-block m-auto py-3"></i>
+                                                    <div class="card-body">
+                                                        <p class="card-text text-dark text-center text-uppercase fw-bold">Mon, Nov 28</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="card bg-light">
+                                                    <i class="fa-regular fa-clock fa-8x text-danger d-block m-auto py-3"></i>
+                                                    <div class="card-body">
+                                                        <p class="card-text text-dark text-center text-uppercase fw-bold">2:00pm</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of 'your progress' and 'youve learned' -->
+
+        <!-- carousel gallery -->
+            <div class="container-fluid p-auto">
+                <div class="row mb-5 px-2">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 col-12 ms-auto pt-2 bg-dark">
+                        <div>
+                            <h2 class="text-muted text-center fw-bold py-md-3 m-sm-3">Gallery</h2>
+                        </div>
+                        <div class="col-xxl-11 m-auto pb-4">
+                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./images/bookeeping.webp" class="d-block w-100" alt="bookeeping">
+                                
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/photography.jpg" class="d-block w-100" alt="photography">
+                                    
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./images/Video Editing.webp" class="d-block w-100" alt="Editing">
+                                    
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- end of carousel -->
+
+        <!-- Best Selling Books -->
+        <section>
+            <div class="container-fluid">
+
+                <!-- title -->
+                <div class="row">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 col-12 ms-auto text-center bg-light mb-3">
+                        <h1 class="text-Dark fw-bold display-4">Best Selling Books</h1>
+                        <p class="lead text-secondary">
+                            Here our best selling books which really helpful for begginers.
+                        </p>
+                    </div>
+                </div>
+                <!-- end of title -->
+
+                <div class="row px-3 mb-5">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 col-12 ms-auto bg-dark">
+                        <div class="row pt-lg-5 mt-4 mb-5">
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 ">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        <img src="./images/bookeeping-book.jpg" class="img-thumbnail rounded">
+                                    </div>
+                                    <div>
+                                        <h2 class="my-3 text-light text-center fw-bold">"Bookeeping"</h2>
+                                        <p class="text-muted text-center">Inside, you’ll learn how to keep track of transactions, unravel up-to-date tax information, recognize your assets, and so much more.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 ">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        <img src="./images/marketing-book.jpg" class="img-thumbnail rounded">
+                                    </div>
+                                    <div>
+                                        <h2 class="my-3 text-light text-center fw-bold">"Marketing Metrics"</h2>
+                                        <p class="text-muted text-center">The Definitive Guide to Measuring Marketing Performance, Second Edition, is the definitive guide to today’s most valuable marketing metrics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 ">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        <img src="./images/photo-basic.jpg" class="img-thumbnail rounded">
+                                    </div>
+                                    <div>    
+                                        <h2 class="my-3 text-light text-center fw-bold">"Photo Basics"</h2>
+                                        <p class="text-muted text-center">For digital camera and smartphone users, this easy how-to guide, written by an experienced National Geographic photographer, imparts the essentials of taking great pictures.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 ">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div>
+                                        <img src="./images/soc-med.jpg" class="img-thumbnail rounded">
+                                    </div>
+                                    <div>
+                                        <h2 class="my-3 text-light text-center fw-bold">"SOC-MED Analytics"</h2>
+                                        <p class="text-muted text-center">When authors applies himself to the business of social media, the result is a timely and important commentary on the state of research capabilities for social media.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of best selling books -->
+
+        <!-- contact -->
+        <section class="col-xxl-10 col-xl-9 col-lg-9 col-12 ms-auto text-center contact-bg py-4 mb-5">
+            <div class="container-fluid">
+                
+                <div class="row justify-content-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-8 col-md-8 col-sm-8 col-8">
+                        <h1 class="text-secondary fw-bold display-4">Contact Us</h1>
+                        <p class="lead text-secondary">
+                            Let's get this conversation started, tell us about your concern and we'll get in touch as soon as we can.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div class="row justify-content-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-8 col-md-8 col-sm-8 col-8">
+                        <div class="text-center text-secondary">
+                            <h2>Have a question?</h2>
+                            <p>Stay connected</p>
+                        </div>
+                        <form class="text-muted text-start">
+                            <div class="form-group pb-3">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" class=>
+                            </div>
+                            <div class="form-group pb-3">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="form-group pb-3">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <button class="btn btn-secondary d-block" type="submit">Submit Question</button>
+                        </form>
+                    </div>
+                </div>
+        </section>
+        <!-- end of contact -->
+
+        <!-- footer -->
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xxl-10 col-xl-9 col-lg-9 ms-auto">
+                        <div class="row justify-content-center border-top pt-3">
+                            <div class="col-lg-6 text-center fw-bold">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="text-dark text-decoration-none">LanceBOX</a>
+                                    </li>
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="text-dark text-decoration-none">about</a>
+                                    </li>
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="text-dark text-decoration-none">Partners</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 text-center fw-bold">
+                                <p>&copy; 2022 Copyright. Made With <i class="fa-solid fa-heart text-danger"></i> by <span><span class="text-primary">WD</span><span class="text-danger">35</span> student</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- end of footer -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
